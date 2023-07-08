@@ -74,21 +74,19 @@ Method: POST
 }
 ```
 ### Request Body Details
-The request body should be a JSON object with the following fields:
-| Field                      | Type    | Range/Type                                 |
-|----------------------------|---------|-------------------------------------------|
-| person_age                 | int     | [20.0, 144.0]                             |
-| person_income              | float   | [4000.0, 6000000.0]                       |
-| person_emp_length          | int     | [0.0, 123.0]                              |
-| loan_amnt                  | float   | [500.0, 35000.0]                          |
-| loan_int_rate              | float   | [5.42, 23.22]                             |
-| loan_percent_income        | float   | [0.0, 0.83]                               |
-| cb_person_cred_hist_length | int     | [2.0, 30.0]                               |
-| person_home_ownership      | str     | 'RENT', 'OWN', 'MORTGAGE', 'OTHER'         |
-| loan_intent                | str     | 'PERSONAL', 'EDUCATION', 'MEDICAL', 'VENTURE', 'HOMEIMPROVEMENT', 'DEBTCONSOLIDATION' |
-| loan_grade                 | str     | 'D', 'B', 'C', 'A', 'E', 'F', 'G'          |
-| cb_person_default_on_file  | str     | 'Y', 'N'                                   |
-
+| Field                      | Type    | Range/Type                                  |
+|----------------------------|---------|--------------------------------------------|
+| person_age                 | int     | 20 - 144 years                             |
+| person_income              | float   | $4,000 - $6,000,000                         |
+| person_emp_length          | int     | 0 - 123 months                             |
+| loan_amnt                  | float   | $500 - $35,000                              |
+| loan_int_rate              | float   | 5.42% - 23.22%                              |
+| loan_percent_income        | float   | 0% - 83%                                    |
+| cb_person_cred_hist_length | int     | 2 - 30 years                                |
+| person_home_ownership      | str     | RENT, OWN, MORTGAGE, OTHER                  |
+| loan_intent                | str     | PERSONAL, EDUCATION, MEDICAL, VENTURE, HOME IMPROVEMENT, DEBT CONSOLIDATION |
+| loan_grade                 | str     | D, B, C, A, E, F, G                         |
+| cb_person_default_on_file  | str     | Yes, No                                     |
 
 
 ## Conclusion
