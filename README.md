@@ -54,9 +54,6 @@ To run the credit risk assessment API locally, you can follow these steps:
 
 Make sure you have Docker installed and running properly on your machine before following these steps. 
 
-### Endpoint: /predict
-Method: POST
-
 ### Example Request
 ```
 {
@@ -74,6 +71,8 @@ Method: POST
 }
 ```
 ### Request Body Details
+
+<sup><sub>
 | Field                      | Type    | Range/Type                                  |
 |----------------------------|---------|--------------------------------------------|
 | person_age                 | int     | 20 - 144 years                             |
@@ -87,7 +86,7 @@ Method: POST
 | loan_intent                | str     | PERSONAL, EDUCATION, MEDICAL, VENTURE, HOME IMPROVEMENT, DEBT CONSOLIDATION |
 | loan_grade                 | str     | D, B, C, A, E, F, G                         |
 | cb_person_default_on_file  | str     | Yes, No                                     |
-
+<sup><sub>
 
 ## Conclusion
 The developed credit risk assessment ML model, trained on the provided dataset, offers an efficient and accurate method for predicting loan default risk. By leveraging various applicant features, the model assists internal bank users in making informed lending decisions. The model's integration as an API enhances its accessibility, allowing for seamless integration with existing bank systems and workflows. This project's outcomes contribute to improved credit risk management, and streamlined loan processing, ultimately reducing the risk of defaults and promoting sound lending practices.
