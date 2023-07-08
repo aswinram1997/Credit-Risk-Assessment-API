@@ -25,22 +25,22 @@ The [Kaggle Dataset](<https://www.kaggle.com/datasets/laotse/credit-risk-dataset
 ## Methodology
 The project follows a typical machine learning workflow consisting of exploratory data analysis (EDA), data splitting, preprocessing, modeling, and evaluation. Additionally, a comparison of tree-based algorithms, including Random Forest, XGBoost, LightGBM, and a Deep Neural Network (DNN), was performed to determine the winning model. The chosen model was then utilized to build a FAST API endpoint. Finally, the API endpoint was containerized using Docker for scalability. The resulting containerized API provides an accessible and scalable solution for credit risk assessment, contributing to efficient loan processing, accurate risk evaluation, and enhanced decision-making within the bank.
 
-### Exploratory Data Analysis (EDA):
+#### Exploratory Data Analysis (EDA):
 EDA was conducted on the dataset to gain insights into the distributions, relationships, and characteristics of the features. This involved performing statistical analysis, visualizations, and identifying any data quality issues or patterns that could impact the modeling process.
 
-### Data Splitting:
+#### Data Splitting:
 The dataset was divided into training and testing sets to assess the model's performance on unseen data accurately. The training set was used for model training and parameter tuning, while the testing set was utilized for evaluating the model's performance.
 
-### Preprocessing:
+#### Preprocessing:
 Data preprocessing steps were applied to ensure the dataset's quality and compatibility with the chosen algorithms. This involved handling missing values, handling imbalanced dataset, encoding categorical features, scaling numerical features. Preprocessing techniques like feature normalization or standardization were employed to ensure consistent data representation.
 
-### Modeling and Evaluation:
+#### Modeling and Evaluation:
 The dataset was used to train and evaluate different machine learning models. A comparison was made between tree-based algorithms (such as Random Forest, XGBoost, and LightGBM) and a Deep Neural Network (DNN). Each model was trained using the training dataset, and their performance was evaluated using the AUC-ROC score. The objective was to identify the best-performing model considering both predictive power and generalizability. The results of modeling and evaluation indicate that DNN outperformed the tree based models as reflected by ROC-AUC scores. This signifies that the ANN model not only exhibits impressive accuracy but also effectively captures the intrinsic patterns and relationships within the dataset. Therefore, the ANN model is selected as the preferred choice for loan default prediction, given its superior performance.
 
-### FAST API Endpoint:
+#### FAST API Endpoint:
 The winning model, chosen for its exceptional performance, was integrated into a FAST API endpoint. This endpoint enables seamless integration into internal bank applications, allowing users to request credit risk assessments for loan applicants. This integration enhances efficiency and ensures informed lending decisions.
 
-### Docker Containerization:
+#### Docker Containerization:
 To ensure scalability and ease of deployment, the API endpoint was containerized using Docker. Containerization encapsulated the API, its dependencies, and the ML model within a portable environment. This approach facilitated easy deployment and scaling across different environments, reducing potential compatibility issues.
 
 
