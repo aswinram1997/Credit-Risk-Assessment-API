@@ -23,7 +23,7 @@ The [Kaggle Dataset](<https://www.kaggle.com/datasets/laotse/credit-risk-dataset
 - cb_preson_cred_hist_length: Length of the loan applicant's credit history.
 
 ## Methodology
-The project follows a typical machine learning workflow consisting of exploratory data analysis (EDA), data splitting, preprocessing, modeling, and evaluation. Additionally, a comparison of tree-based algorithms, including Random Forest, XGBoost, LightGBM, and a Deep Neural Network (DNN), was performed to determine the winning model. The chosen model was then utilized to build a FAST API endpoint. Finally, the API endpoint was containerized using Docker for scalability.
+The project follows a typical machine learning workflow consisting of exploratory data analysis (EDA), data splitting, preprocessing, modeling, and evaluation. Additionally, a comparison of tree-based algorithms, including Random Forest, XGBoost, LightGBM, and a Deep Neural Network (DNN), was performed to determine the winning model. The chosen model was then utilized to build a FAST API endpoint. Finally, the API endpoint was containerized using Docker for scalability. The resulting containerized API provides an accessible and scalable solution for credit risk assessment, contributing to efficient loan processing, accurate risk evaluation, and enhanced decision-making within the bank.
 
 ### Exploratory Data Analysis (EDA):
 EDA was conducted on the dataset to gain insights into the distributions, relationships, and characteristics of the features. This involved performing statistical analysis, visualizations, and identifying any data quality issues or patterns that could impact the modeling process.
@@ -42,8 +42,6 @@ The winning model, chosen for its exceptional performance, was integrated into a
 
 ### Docker Containerization:
 To ensure scalability and ease of deployment, the API endpoint was containerized using Docker. Containerization encapsulated the API, its dependencies, and the ML model within a portable environment. This approach facilitated easy deployment and scaling across different environments, reducing potential compatibility issues.
-
-By following this methodology, the project accomplished effective exploratory data analysis, model comparison, model selection, API development, and containerization using Docker. The resulting API provides an accessible and scalable solution for credit risk assessment, contributing to efficient loan processing, accurate risk evaluation, and enhanced decision-making within the bank.
 
 
 ## Running the API Locally
