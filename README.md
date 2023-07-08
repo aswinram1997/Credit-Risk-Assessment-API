@@ -31,7 +31,7 @@ EDA was conducted on the dataset to gain insights into the distributions, relati
 #### Data Splitting:
 The dataset was divided into training and testing sets to assess the model's performance on unseen data accurately. The training set was used for model training and parameter tuning, while the testing set was utilized for evaluating the model's performance.
 
-#### Preprocessing:
+#### Data Preprocessing:
 Data preprocessing steps were applied to ensure the dataset's quality and compatibility with the chosen algorithms. This involved handling missing values, handling imbalanced dataset, encoding categorical features, scaling numerical features. Preprocessing techniques like feature normalization or standardization were employed to ensure consistent data representation.
 
 #### Modeling and Evaluation:
