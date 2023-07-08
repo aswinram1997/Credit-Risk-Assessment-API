@@ -22,25 +22,25 @@ The [Kaggle Dataset](<https://www.kaggle.com/datasets/laotse/credit-risk-dataset
 - cb_person_default_on_file: Historical default status of the loan applicant.
 - cb_preson_cred_hist_length: Length of the loan applicant's credit history.
 
-- ## Methodology
+## Methodology
 The project follows a typical machine learning workflow consisting of exploratory data analysis (EDA), data splitting, preprocessing, modeling, and evaluation. Additionally, a comparison of tree-based algorithms, including Random Forest, XGBoost, LightGBM, and a Deep Neural Network (DNN), was performed to determine the winning model. The chosen model was then utilized to build a FAST API endpoint. Finally, the API endpoint was containerized using Docker for scalability.
 
-- ### Exploratory Data Analysis (EDA):
+### Exploratory Data Analysis (EDA):
 EDA was conducted on the dataset to gain insights into the distributions, relationships, and characteristics of the features. This involved performing statistical analysis, visualizations, and identifying any data quality issues or patterns that could impact the modeling process.
 
-- ### Data Splitting:
+### Data Splitting:
 The dataset was divided into training and testing sets to assess the model's performance on unseen data accurately. The training set was used for model training and parameter tuning, while the testing set was utilized for evaluating the model's performance.
 
-- ### Preprocessing:
+### Preprocessing:
 Data preprocessing steps were applied to ensure the dataset's quality and compatibility with the chosen algorithms. This involved handling missing values, handling imbalanced dataset, encoding categorical features, scaling numerical features. Preprocessing techniques like feature normalization or standardization were employed to ensure consistent data representation.
 
-- ### Modeling and Evaluation:
+### Modeling and Evaluation:
 The dataset was used to train and evaluate different machine learning models. A comparison was made between tree-based algorithms (such as Random Forest, XGBoost, and LightGBM) and a Deep Neural Network (DNN). Each model was trained using the training dataset, and their performance was evaluated using the AUC-ROC score. The objective was to identify the best-performing model considering both predictive power and generalizability. The results of modeling and evaluation indicate that DNN outperformed the tree based models as reflected by ROC-AUC scores. This signifies that the ANN model not only exhibits impressive accuracy but also effectively captures the intrinsic patterns and relationships within the dataset. Therefore, the ANN model is selected as the preferred choice for loan default prediction, given its superior performance.
 
-- ### FAST API Endpoint:
+### FAST API Endpoint:
 The winning model, chosen for its exceptional performance, was integrated into a FAST API endpoint. This endpoint enables seamless integration into internal bank applications, allowing users to request credit risk assessments for loan applicants. This integration enhances efficiency and ensures informed lending decisions.
 
-- ### Docker Containerization:
+### Docker Containerization:
 To ensure scalability and ease of deployment, the API endpoint was containerized using Docker. Containerization encapsulated the API, its dependencies, and the ML model within a portable environment. This approach facilitated easy deployment and scaling across different environments, reducing potential compatibility issues.
 
 By following this methodology, the project accomplished effective exploratory data analysis, model comparison, model selection, API development, and containerization using Docker. The resulting API provides an accessible and scalable solution for credit risk assessment, contributing to efficient loan processing, accurate risk evaluation, and enhanced decision-making within the bank.
@@ -69,35 +69,36 @@ To run the credit risk assessment API locally, you can follow these steps:
   - loan_grade (str): Grade of the loan (one of: 'D', 'B', 'C', 'A', 'E', 'F', 'G').
   - cb_person_default_on_file (str): Past defaults on file (one of: 'Y', 'N').
 
-### Example Request:
+### Example Request
+```
 {
-    "person_age": 25,
-    "person_income": 50000.0,
-    "person_emp_length": 5,
-    "loan_amnt": 10000.0,
-    "loan_int_rate": 7.5,
-    "loan_percent_income": 20.0,
-    "cb_person_cred_hist_length": 3,
-    "person_home_ownership": "RENT",
-    "loan_intent": "EDUCATION",
-    "loan_grade": "A",
-    "cb_person_default_on_file": "N"
+"person_age": 25,
+"person_income": 50000.0,
+"person_emp_length": 5,
+"loan_amnt": 10000.0,
+"loan_int_rate": 7.5,
+"loan_percent_income": 20.0,
+"cb_person_cred_hist_length": 3,
+"person_home_ownership": "RENT",
+"loan_intent": "EDUCATION",
+"loan_grade": "A",
+"cb_person_default_on_file": "N"
 }
-
+```
 #### Numerical Ranges:
-person_age: [20.0, 144.0]
-person_income: [4000.0, 6000000.0]
-person_emp_length: [0.0, 123.0]
-loan_amnt: [500.0, 35000.0]
-loan_int_rate: [5.42, 23.22]
-loan_percent_income: [0.0, 0.83]
-cb_person_cred_hist_length: [2.0, 30.0]
+- person_age: [20.0, 144.0]
+- person_income: [4000.0, 6000000.0]
+- person_emp_length: [0.0, 123.0]
+- loan_amnt: [500.0, 35000.0]
+- loan_int_rate: [5.42, 23.22]
+- loan_percent_income: [0.0, 0.83]
+- cb_person_cred_hist_length: [2.0, 30.0]
 
 #### Categorical Types:
-person_home_ownership: ['RENT', 'OWN', 'MORTGAGE', 'OTHER']
-loan_intent: ['PERSONAL', 'EDUCATION', 'MEDICAL', 'VENTURE', 'HOMEIMPROVEMENT', 'DEBTCONSOLIDATION']
-loan_grade: ['D', 'B', 'C', 'A', 'E', 'F', 'G']
-cb_person_default_on_file: ['Y', 'N']
+- person_home_ownership: ['RENT', 'OWN', 'MORTGAGE', 'OTHER']
+- loan_intent: ['PERSONAL', 'EDUCATION', 'MEDICAL', 'VENTURE', 'HOMEIMPROVEMENT', 'DEBTCONSOLIDATION']
+- loan_grade: ['D', 'B', 'C', 'A', 'E', 'F', 'G']
+-cb_person_default_on_file: ['Y', 'N']
 
 ## Conclusion
 The developed credit risk assessment ML model, trained on the provided dataset, offers an efficient and accurate method for predicting loan default risk. By leveraging various applicant features, the model assists internal bank users in making informed lending decisions. The model's integration as an API enhances its accessibility, allowing for seamless integration with existing bank systems and workflows. This project's outcomes contribute to improved credit risk management, and streamlined loan processing, ultimately reducing the risk of defaults and promoting sound lending practices.
