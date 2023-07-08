@@ -47,25 +47,15 @@ To ensure scalability and ease of deployment, the API endpoint was containerized
 ## Running the API Locally
 To run the credit risk assessment API locally, you can follow these steps:
 
-1. Clone the project repository from GitHub.
-2. Install the required dependencies by running `pip install -r requirements.txt`.
-3. Run the API using the following command: `python main.py`.
-4. Once the API is running, you can send POST requests to the `/predict` endpoint to get credit risk assessments for loan applicants.
+To run the credit risk assessment API locally:
+
+1. Clone the project repository: git clone https://github.com/aswinram1997/Credit-Risk-Assessment_API.git
+2. Install dependencies: pip install -r requirements.txt
+3. Run the API: python main.py
+4. Send POST requests to /predict for credit risk assessments.
 
 ### Endpoint: /predict
 - Method: POST
-- Request Body: JSON object with the following fields:
-  - person_age (int): Age of the person (18 and above).
-  - person_income (float): Annual income of the person (greater than 0).
-  - person_emp_length (int): Employment length in years (positive integer).
-  - loan_amnt (float): Loan amount requested (greater than 0).
-  - loan_int_rate (float): Loan interest rate (greater than 0).
-  - loan_percent_income (float): Loan amount as a percentage of person's income (between 0 and 100).
-  - cb_person_cred_hist_length (int): Length of the credit history in years (positive integer).
-  - person_home_ownership (str): Home ownership status (one of: 'RENT', 'OWN', 'MORTGAGE', 'OTHER').
-  - loan_intent (str): Purpose of the loan (one of: 'PERSONAL', 'EDUCATION', 'MEDICAL', 'VENTURE', 'HOMEIMPROVEMENT', 'DEBTCONSOLIDATION').
-  - loan_grade (str): Grade of the loan (one of: 'D', 'B', 'C', 'A', 'E', 'F', 'G').
-  - cb_person_default_on_file (str): Past defaults on file (one of: 'Y', 'N').
 
 ### Example Request
 ```
@@ -83,6 +73,22 @@ To run the credit risk assessment API locally, you can follow these steps:
 "cb_person_default_on_file": "N"
 }
 ```
+### Request Body Details
+The request body should be a JSON object with the following fields:
+| Field                      | Type   |
+|----------------------------|--------|
+| person_age                 | int    |
+| person_income              | float  |
+| person_emp_length          | int    |
+| loan_amnt                  | float  |
+| loan_int_rate              | float  |
+| loan_percent_income        | float  |
+| cb_person_cred_hist_length | int    |
+| person_home_ownership      | str    |
+| loan_intent                | str    |
+| loan_grade                 | str    |
+| cb_person_default_on_file  | str    |
+
 #### Numerical Ranges:
 - person_age: [20.0, 144.0]
 - person_income: [4000.0, 6000000.0]
