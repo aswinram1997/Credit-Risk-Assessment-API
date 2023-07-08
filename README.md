@@ -71,22 +71,17 @@ Make sure you have Docker installed and running properly on your machine before 
 }
 ```
 ### Request Body Details
-
-<sup><sub>
-| Field                      | Type    | Range/Type                                  |
-|----------------------------|---------|--------------------------------------------|
-| person_age                 | int     | 20 - 144 years                             |
-| person_income              | float   | $4,000 - $6,000,000                         |
-| person_emp_length          | int     | 0 - 123 months                             |
-| loan_amnt                  | float   | $500 - $35,000                              |
-| loan_int_rate              | float   | 5.42% - 23.22%                              |
-| loan_percent_income        | float   | 0% - 83%                                    |
-| cb_person_cred_hist_length | int     | 2 - 30 years                                |
-| person_home_ownership      | str     | RENT, OWN, MORTGAGE, OTHER                  |
-| loan_intent                | str     | PERSONAL, EDUCATION, MEDICAL, VENTURE, HOME IMPROVEMENT, DEBT CONSOLIDATION |
-| loan_grade                 | str     | D, B, C, A, E, F, G                         |
-| cb_person_default_on_file  | str     | Yes, No                                     |
-<sup><sub>
+- `person_age`: integer (range: 20 - 144 years)
+- `person_income`: float (range: $4,000 - $6,000,000)
+- `person_emp_length`: integer (range: 0 - 123 months)
+- `loan_amnt`: float (range: $500 - $35,000)
+- `loan_int_rate`: float (range: 5.42% - 23.22%)
+- `loan_percent_income`: float (range: 0% - 83%)
+- `cb_person_cred_hist_length`: integer (range: 2 - 30 years)
+- `person_home_ownership`: string (values: RENT, OWN, MORTGAGE, OTHER)
+- `loan_intent`: string (values: PERSONAL, EDUCATION, MEDICAL, VENTURE, HOME IMPROVEMENT, DEBT CONSOLIDATION)
+- `loan_grade`: string (values: D, B, C, A, E, F, G)
+- `cb_person_default_on_file`: string (values: Yes, No)
 
 ## Conclusion
 The developed credit risk assessment ML model, trained on the provided dataset, offers an efficient and accurate method for predicting loan default risk. By leveraging various applicant features, the model assists internal bank users in making informed lending decisions. The model's integration as an API enhances its accessibility, allowing for seamless integration with existing bank systems and workflows. This project's outcomes contribute to improved credit risk management, and streamlined loan processing, ultimately reducing the risk of defaults and promoting sound lending practices.
