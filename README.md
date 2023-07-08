@@ -49,10 +49,10 @@ To run the credit risk assessment API locally, you can follow these steps:
 
 To run the credit risk assessment API locally:
 
-1. Clone the project repository: git clone https://github.com/aswinram1997/Credit-Risk-Assessment_API.git
-2. Install dependencies: pip install -r requirements.txt
-3. Run the API: python main.py
-4. Send POST requests to /predict for credit risk assessments.
+1. Clone the project repository: git clone `https://github.com/aswinram1997/Credit-Risk-Assessment_API.git`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run the API: `python main.py`
+4. Send POST requests to `/predict` for credit risk assessments
 
 ### Endpoint: /predict
 - Method: POST
