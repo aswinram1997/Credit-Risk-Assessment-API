@@ -47,15 +47,13 @@ To ensure scalability and ease of deployment, the API endpoint was containerized
 ## Running the API Locally
 To run the credit risk assessment API locally, you can follow these steps:
 
-To run the credit risk assessment API locally:
-
 1. Clone the project repository: git clone `https://github.com/aswinram1997/Credit-Risk-Assessment_API.git`
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run the API: `python main.py`
 4. Send POST requests to `/predict` for credit risk assessments
 
 ### Endpoint: /predict
-- Method: POST
+Method: POST
 
 ### Example Request
 ```
@@ -90,19 +88,25 @@ The request body should be a JSON object with the following fields:
 | cb_person_default_on_file  | str    |
 
 #### Numerical Ranges:
-- person_age: [20.0, 144.0]
-- person_income: [4000.0, 6000000.0]
-- person_emp_length: [0.0, 123.0]
-- loan_amnt: [500.0, 35000.0]
-- loan_int_rate: [5.42, 23.22]
-- loan_percent_income: [0.0, 0.83]
-- cb_person_cred_hist_length: [2.0, 30.0]
+| Field                      | Range                             |
+|----------------------------|-----------------------------------|
+| person_age                 | [20.0, 144.0]                     |
+| person_income              | [4000.0, 6000000.0]               |
+| person_emp_length          | [0.0, 123.0]                      |
+| loan_amnt                  | [500.0, 35000.0]                  |
+| loan_int_rate              | [5.42, 23.22]                     |
+| loan_percent_income        | [0.0, 0.83]                       |
+| cb_person_cred_hist_length | [2.0, 30.0]                       |
+
 
 #### Categorical Types:
-- person_home_ownership: ['RENT', 'OWN', 'MORTGAGE', 'OTHER']
-- loan_intent: ['PERSONAL', 'EDUCATION', 'MEDICAL', 'VENTURE', 'HOMEIMPROVEMENT', 'DEBTCONSOLIDATION']
-- loan_grade: ['D', 'B', 'C', 'A', 'E', 'F', 'G']
-- cb_person_default_on_file: ['Y', 'N']
+| Field                     | Types                                                                                  |
+|---------------------------|----------------------------------------------------------------------------------------|
+| person_home_ownership     | 'RENT', 'OWN', 'MORTGAGE', 'OTHER'                                                     |
+| loan_intent               | 'PERSONAL', 'EDUCATION', 'MEDICAL', 'VENTURE', 'HOMEIMPROVEMENT', 'DEBTCONSOLIDATION'  |
+| loan_grade                | 'D', 'B', 'C', 'A', 'E', 'F', 'G'                                                      |
+| cb_person_default_on_file | 'Y', 'N'                                                                               |
+
 
 ## Conclusion
 The developed credit risk assessment ML model, trained on the provided dataset, offers an efficient and accurate method for predicting loan default risk. By leveraging various applicant features, the model assists internal bank users in making informed lending decisions. The model's integration as an API enhances its accessibility, allowing for seamless integration with existing bank systems and workflows. This project's outcomes contribute to improved credit risk management, and streamlined loan processing, ultimately reducing the risk of defaults and promoting sound lending practices.
