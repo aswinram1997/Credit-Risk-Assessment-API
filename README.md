@@ -52,6 +52,8 @@ To run the credit risk assessment API locally, you can follow these steps:
 3. Run the API: `python main.py`
 4. Send POST requests to `/predict` for credit risk assessments
 
+Make sure you have Docker installed and running properly on your machine before following these steps. 
+
 ### Endpoint: /predict
 Method: POST
 
@@ -73,39 +75,20 @@ Method: POST
 ```
 ### Request Body Details
 The request body should be a JSON object with the following fields:
-| Field                      | Type   |
-|----------------------------|--------|
-| person_age                 | int    |
-| person_income              | float  |
-| person_emp_length          | int    |
-| loan_amnt                  | float  |
-| loan_int_rate              | float  |
-| loan_percent_income        | float  |
-| cb_person_cred_hist_length | int    |
-| person_home_ownership      | str    |
-| loan_intent                | str    |
-| loan_grade                 | str    |
-| cb_person_default_on_file  | str    |
+| Field                      | Type    | Range/Type                                 |
+|----------------------------|---------|-------------------------------------------|
+| person_age                 | int     | [20.0, 144.0]                             |
+| person_income              | float   | [4000.0, 6000000.0]                       |
+| person_emp_length          | int     | [0.0, 123.0]                              |
+| loan_amnt                  | float   | [500.0, 35000.0]                          |
+| loan_int_rate              | float   | [5.42, 23.22]                             |
+| loan_percent_income        | float   | [0.0, 0.83]                               |
+| cb_person_cred_hist_length | int     | [2.0, 30.0]                               |
+| person_home_ownership      | str     | 'RENT', 'OWN', 'MORTGAGE', 'OTHER'         |
+| loan_intent                | str     | 'PERSONAL', 'EDUCATION', 'MEDICAL', 'VENTURE', 'HOMEIMPROVEMENT', 'DEBTCONSOLIDATION' |
+| loan_grade                 | str     | 'D', 'B', 'C', 'A', 'E', 'F', 'G'          |
+| cb_person_default_on_file  | str     | 'Y', 'N'                                   |
 
-#### Numerical Ranges:
-| Field                      | Range                             |
-|----------------------------|-----------------------------------|
-| person_age                 | [20.0, 144.0]                     |
-| person_income              | [4000.0, 6000000.0]               |
-| person_emp_length          | [0.0, 123.0]                      |
-| loan_amnt                  | [500.0, 35000.0]                  |
-| loan_int_rate              | [5.42, 23.22]                     |
-| loan_percent_income        | [0.0, 0.83]                       |
-| cb_person_cred_hist_length | [2.0, 30.0]                       |
-
-
-#### Categorical Types:
-| Field                     | Types                                                                                  |
-|---------------------------|----------------------------------------------------------------------------------------|
-| person_home_ownership     | 'RENT', 'OWN', 'MORTGAGE', 'OTHER'                                                     |
-| loan_intent               | 'PERSONAL', 'EDUCATION', 'MEDICAL', 'VENTURE', 'HOMEIMPROVEMENT', 'DEBTCONSOLIDATION'  |
-| loan_grade                | 'D', 'B', 'C', 'A', 'E', 'F', 'G'                                                      |
-| cb_person_default_on_file | 'Y', 'N'                                                                               |
 
 
 ## Conclusion
