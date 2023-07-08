@@ -47,15 +47,15 @@ To ensure scalability and ease of deployment, the API endpoint was containerized
 ## Running the API Locally
 To run the credit risk assessment API locally, you can follow these steps:
 
-1. Clone the project repository: git clone https://github.com/aswinram1997/Credit-Risk-Assessment_API.git
+1. Clone the project repository: `git clone https://github.com/aswinram1997/Credit-Risk-Assessment_API.git`
 
 2. Install Docker and ensure it is running properly on your machine.
 
-3. Navigate to the project directory: cd Credit-Risk-Assessment_API
+3. Navigate to the project directory.
 
-4. Build the Docker image using the Dockerfile: docker build -t credit-risk-api .
+4. Build the Docker image using the Dockerfile: `docker build -t credit-risk-api`
 
-5. Run the Docker container based on the created image: docker run -p 8000:8000 credit-risk-api
+5. Run the Docker container based on the created image: `docker run -p 8000:8000 credit-risk-api`
 
 6. Once the Docker container is running, you can send POST requests to http://localhost:8000/predict for credit risk assessments.
 
