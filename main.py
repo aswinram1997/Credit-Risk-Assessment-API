@@ -41,7 +41,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    message = "Welcome to the Credit Risk Assessment API! The API is up and running, and you can use it to make credit risk assessment predictions. To make a prediction, send a POST request to the /predict endpoint with the required data."
+    message = "The Credit Risk Assessment API is up and running!"
     return {"message": message}
 
 
