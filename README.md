@@ -53,7 +53,7 @@ To run the credit risk assessment API locally, you can follow these steps:
 
 3. Navigate to the project directory.
 
-4. Build the Docker image using the Dockerfile: `docker build -t credit-risk-api`
+4. Build the Docker image using the Dockerfile: `docker build -t credit-risk-api .`
 
 5. Run the Docker container based on the created image: `docker run -p 8000:8000 credit-risk-api`
 
