@@ -4,7 +4,7 @@
 
 
 ## Project Overview
-The project aims to develop a credit risk assessment ML model using [Kaggle Dataset](<https://www.kaggle.com/datasets/laotse/credit-risk-dataset>) that predicts the likelihood of loan default based on various applicant features. The model is exposed as a containerized API, allowing internal bank applications and systems to request credit risk assessments for loan applicants. The model's predictions will assist in making efficient and well-informed lending decisions minimizing financial losses and strengthen the bank's overall financial stability.
+The project aims to develop a credit risk assessment ML model using a[Kaggle Dataset](<https://www.kaggle.com/datasets/laotse/credit-risk-dataset>) that predicts the likelihood of loan default based on various applicant features. The model is exposed as a containerized API, allowing internal bank applications and systems to request credit risk assessments for loan applicants. The model's predictions will assist in making efficient and well-informed lending decisions minimizing financial losses and strengthen the bank's overall financial stability.
 
 ## Dataset Overview
 The [Kaggle Dataset](<https://www.kaggle.com/datasets/laotse/credit-risk-dataset>) used for the project has 32581 records and includes several features that capture relevant information about loan applicants. These features are as follows:
