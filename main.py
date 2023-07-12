@@ -35,9 +35,6 @@ except Exception as e:
     print("Error loading model:", str(e))
     model = None
 
-from fastapi import FastAPI
-
-app = FastAPI()
 
 @app.get("/")
 async def root():
