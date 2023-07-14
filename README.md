@@ -1,4 +1,4 @@
-# Credit-Risk-Asessment_API
+# Credit-Risk-Asessment-API
 
 ![kenny-eliason-8fDhgAN5zG0-unsplash](https://github.com/aswinram1997/Insightful_Clusters_App/assets/102771069/06c171a5-0f57-4b2d-9cca-37ed235251fd)
 
